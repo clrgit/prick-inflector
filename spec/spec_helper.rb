@@ -3,7 +3,7 @@
 
 # frozen_string_literal: true
 
-require "prick_inflector"
+require "prick-inflector"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative "lib/prick_inflector/version"
+require_relative "lib/prick-inflector/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "prick_inflector"
-  spec.version = PrickInflector::VERSION
+  spec.name = "prick-inflector"
+  spec.version = Prick::Inflector::VERSION
   spec.authors = ["Claus Rasmussen"]
   spec.email = ["claus.l.rasmussen@gmail.com"]
 
-  spec.summary = "Gem prick_inflector"
-  spec.description = "Gem prick_inflector"
+  spec.summary = "Gem prick-inflector"
+  spec.description = "Gem prick-inflector"
   spec.homepage = "http://www.nowhere.com/"
   spec.required_ruby_version = ">= 2.6.0"
 
@@ -26,6 +26,8 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "dry-inflector"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
