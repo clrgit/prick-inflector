@@ -27,6 +27,10 @@ describe Prick::Inflector do
       expect(si "dogs").to eq "dog"
     end
 
+    it "handles 's'" do
+      expect(si "s").to eq "s"
+    end
+
     context "when word is uncountable" do
       it "handles -es suffix" do
         expect(si "newses").to eq "news"

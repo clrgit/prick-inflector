@@ -22,7 +22,9 @@ module Prick::Inflector
   # Note that DryInflector::singularize handles the special PgGraph
   # pluralization rules by default
   def self.singularize(word)
-    if word =~ /^(.*s)es$/ && pluralize($1) == word
+    if word == "s" # Dry::Inflector return an empty string
+      "s"
+    elsif word =~ /^(.*s)es$/ && pluralize($1) == word
       $1
     else
       @@inflector.singularize(word)
